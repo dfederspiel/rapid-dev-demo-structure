@@ -1,0 +1,26 @@
+.pricing-plan-mobile {
+    display: flex;
+    flex-direction: column;
+    .pricing-plan {
+        display: flex;
+    }
+}
+
+.pricing-plan-desktop {
+    display: none;
+    .heading-row, .feature-row, .pricing-row {
+        display: table-row;
+        .column {
+            display: table-cell;
+        }
+    }
+}
+
+@include tablet {
+    .pricing-plan-mobile {
+        display: none;
+    }
+    .pricing-plan-desktop {
+        display: table;
+    }
+}

@@ -1,0 +1,114 @@
+
+:root {
+    font-size: 62.5%;
+}
+
+body {
+    font-size: 1.5rem;
+    line-height: 2.5rem;
+    font-family: $ssans;
+}
+
+h1,
+.h1 {
+    font-family: $ssans;
+    font-size: 2.8rem;
+    line-height: 3.6rem;
+    font-weight: bold;
+    margin-top: 0;
+    margin-bottom: 1.5rem;
+    @include laptop {
+        font-size: 5.2rem;
+        line-height: 6.5rem;
+    }
+}
+
+h2,
+.h2 {
+    font-family: $ssans;
+    font-size: 4.2rem;
+    line-height: 5.2rem;
+    font-weight: 700;
+    margin-top: 0;
+    margin-bottom: 1.5rem;
+    @include theme('.body'){
+        font-family: $ssans;
+        font-size: 2.8rem;
+        line-height: 3.8rem;
+        color: $algae;
+    }
+}
+
+h3,
+.h3 {
+    font-family: $ssans;
+    font-size: 2.8rem;
+    line-height: 2.7rem;
+    font-weight: 700;
+    margin-top: 0;
+    margin-bottom: 1.5rem;
+    
+}
+
+h4,
+.h4 {
+    font-family: $ssans;
+    font-size: 2.2rem;
+    line-height: 3rem;
+    font-weight: 400;
+    margin-top: 0;
+    margin-bottom: 1.5rem;
+}
+
+h5,
+.h5 {
+    font-family: $ssans;
+    font-size: 1.8rem;
+    line-height: 2.3rem;
+    font-weight: 700;
+    margin-top: 0;
+    margin-bottom: 1.5rem;
+}
+
+p {
+    font-family: $ssans;
+    font-size: 1.6rem;
+    line-height: 3.4rem;
+}
+
+header {
+    .top-menu {
+        font-family: $ssans;
+        font-size: 1.5rem;
+        line-height: 1.9rem;
+    }
+
+    p {
+        font-family: $ssans;
+        font-size: 1.5rem;
+        line-height: 2.5rem;
+        font-weight: 100;
+        opacity: .85;
+    }
+}
+
+.body {
+    .surtitle {
+        font-size: 24px;
+        line-height: 41px;
+        color: $algae;
+        font-weight: bold;
+        text-align: center;
+    }
+    .title {
+        font-size: 42px;
+        line-height: 52px;
+        color: $black;
+        font-weight: bold;
+        text-align: center;
+    }
+}
+
+footer {
+
+}

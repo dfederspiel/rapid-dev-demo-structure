@@ -1,0 +1,12 @@
+footer {
+    padding: 25px;
+    margin-top: 25px;
+    background-color: $navy;
+    color: $menu-item;
+
+
+    .footer-wrapper {
+        background: url('/img/footer-image.png') no-repeat center;
+        background-size: cover;
+    }
+}

@@ -1,0 +1,49 @@
+header {
+    background-color: $navy;
+    color: $menu-item;
+    margin-bottom: 25px;
+    button {
+        border-radius: 50px;
+        background-color: #2BA26F;
+        border-color: #0DC9A3;
+        border-style: solid;
+        padding: 10px 40px;
+    }
+    .top-menu {
+        text-align: right;
+        a {
+            padding: 10px;
+            transition: all .5s;
+            color: $white;
+        }
+
+        @include states {
+            cursor: pointer;
+            a {
+                
+                text-decoration: none;
+            }
+
+        }
+    }
+
+    .logo {
+        text-align: left;
+        img{
+            max-height: 38px;
+        }
+    }
+    
+
+    .header-wrapper {
+        background: url('/img/header-background-svg.svg') no-repeat center;
+        background-size: cover;
+        padding: 30px 0;
+    }
+
+    .video-link {
+        height: 200px;
+        background: url('/img/header-devices.png') no-repeat center;
+        background-size: 500px;
+    }
+}

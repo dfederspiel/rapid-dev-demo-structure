@@ -1,0 +1,63 @@
+include  layouts/bootstrap/cnt.pug
+include  layouts/bootstrap/cnf.pug
+include  layouts/bootstrap/col.pug
+include  layouts/bootstrap/row.pug
+
+include  generators/article.pug
+include  generators/author.pug
+include  generators/ipsum.pug
+include  generators/wysiwyg.pug
+include generators/styleguide.pug
+
+include components/animate.pug
+include components/scrollify.pug
+
+doctype html
+html(lang="en")
+    head
+        title Base Template
+        meta(name="viewport" content="width=device-width, initial-scale=1")
+        link(href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous")
+        link(href="/css/bundle.min.css" rel="stylesheet")
+        link(rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css")
+    body.standard
+        header
+            block header
+                +cnt
+                    +row
+                        +col
+                            div.content(style='margin: 50px; text-align: center')
+                                h1 Pug Dev
+            block sub-header
+                ul
+                    li
+                        a(href="/") Home
+                    li
+                        a(href="/components/") Components
+                    li
+                        a(href="/layouts/") Layouts
+                    li
+                        a(href="/stage/") Stage
+        main
+            block main
+                +cnt
+                    +row
+                        +col
+                            div.content(style='margin: 50px; text-align: center').
+                                Lorem ipsum dolor sit amet, consetetur sadipscing elitr,
+                                sed diam nonumy eirmod tempor invidunt ut labore et dolore
+                                magna aliquyam erat, sed diam voluptua.
+
+        footer
+            block footer
+                +cnt
+                    +row
+                        +col
+                            div.content(style='margin: 50px; text-align: center')
+                                h1 :)
+        block scripts
+            script(src="https://code.jquery.com/jquery-3.1.1.min.js" integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8=" crossorigin="anonymous")
+            script(src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js")           
+            script(src="https://cdnjs.cloudflare.com/ajax/libs/scrollify/1.0.19/jquery.scrollify.js")
+            script(src="/js/vendor.min.js")  
+            script(src="/js/all.min.js")    

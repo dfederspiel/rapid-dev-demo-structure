@@ -1,0 +1,33 @@
+// Contains 
+@import 'toolbox/variables';
+
+@import 'toolbox/mixins';
+@import 'toolbox/styleguide';
+
+// font colors
+@import 'brand/palette';
+// font families, sizes, line-heights
+@import 'brand/typography';
+
+@import 'stage/scrollify';
+
+@import 'header';
+@import 'footer';
+
+@import 'pricing-plans';
+
+img {
+    max-width: 100%;
+}
+
+
+.device-photo{
+    height: 500px;
+    background: url('/img/ipad-mockup.png') no-repeat center center;
+    background-size: 1040px;
+    @include laptop {
+        background-size: 950px;
+    }
+}
+
+

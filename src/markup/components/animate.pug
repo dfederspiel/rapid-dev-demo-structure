@@ -1,0 +1,6 @@
+mixin animate(name)
+    .animation-wrapper(data-animation= name || 'hinge')
+        if block
+            block
+        else
+            h1 Yo! Put some content here!

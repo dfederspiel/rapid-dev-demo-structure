@@ -1,0 +1,8 @@
+mixin scrollify(sectionName)
+    .scroll-panel(data-section-name= sectionName || 'name-this-section')
+        .goodies
+            if block
+                block
+            else
+                h2.
+                    HEY. PUT CONTENT HERE.

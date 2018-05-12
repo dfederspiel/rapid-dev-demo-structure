@@ -1,0 +1,192 @@
+extends base.pug
+
+block header
+    .header-wrapper
+        +cnt
+            +row
+                +col('col-xs-3')
+                    picture.logo
+                        source(media='(min-width: 768px)', srcset='img/structure-logo-full.svg')
+                        img(src='img/structure-logo-s.svg', alt='Structure', style='width:auto;')
+                +col('col-xs-9')
+                    .top-menu
+                        a(href='') Pricing
+                        a(href='') Benefits
+                        a(href='') Features
+            +row
+                +col('col-md-6 col-md-push-6 video-link')
+                +col('col-md-6 col-md-pull-6')
+                    h1.
+                        Powerful, yet simple firm management software for Architects & Engineers.
+                    p
+                        +ipsum(50)
+                    button GET A DEMO
+block sub-header
+
+block main
+    .body
+        +cnt
+            +row
+                +col('col-md-6 device-photo') 
+                +col('col-md-6')
+                    h2 Know when and what your employees are working on. Anytime, anywhere.
+                    p Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                    .check-list
+                        .item Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eismod
+                        .item Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eismod
+                        .item Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eismod
+                        .item Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eismod
+        +cnt
+            +row
+                +col('col-xs-12')
+                    .surtitle Structure Features
+                    .title Improve Your Bottom Line with These Must-Have Features.
+            +row
+                +col('col-md-4')
+                    .icon ICON
+                    h3
+                        +ipsum('2')
+                    p 
+                        +ipsum('40')
+                +col('col-md-4')
+                    .icon ICON
+                    h3
+                        +ipsum('2')
+                    p 
+                        +ipsum('40')
+                +col('col-md-4')
+                    .icon ICON
+                    h3
+                        +ipsum('2')
+                    p 
+                        +ipsum('40')
+                +col('col-md-4')
+                    .icon ICON
+                    h3
+                        +ipsum('2')
+                    p 
+                        +ipsum('40')
+        +cnt
+            +row
+                +col
+                    .testimonial
+                        .image
+                        .name
+                        .title
+                        .quote
+                    .testimonial
+                        .image
+                        .name
+                        .title
+                        .quote
+                    .testimonial
+                        .image
+                        .name
+                        .title
+                        .quote
+        +cnt
+            +row
+                +col
+                    h3 Structure Pricing
+                    h2 Get the Right Set of Features for Your Business.
+                +col
+                    .pricing-plan-desktop
+                        .heading-row
+                            .heading.column
+                            .heading.column Free
+                            .heading.column Basic
+                            .heading.column.featured Professional
+                            .heading.column Enterprise
+                        .feature-row
+                            .column Project Management
+                            .column.checked
+                            .column.checked
+                            .column.checked.featured
+                            .column.checked
+                        .feature-row
+                            .column Reporting
+                            .column.checked
+                            .column.checked
+                            .column.checked.featured
+                            .column.checked
+                        .feature-row
+                            .column Resource Scheduling
+                            .column.checked
+                            .column.checked
+                            .column.checked.featured
+                            .column.checked
+                        .feature-row
+                            .column Time Entry
+                            .column
+                            .column.checked
+                            .column.checked.featured
+                            .column.checked
+                        .pricing-row
+                            .column Price Per User
+                            .column
+                                .price 
+                                    h3 Free
+                                    img(src='img/price-0mo.svg')
+                            .column
+                                .price 
+                                    h3 Basic
+                                    img(src='img/price-5mo.svg')
+                            .column
+                                .price 
+                                    h3 Professional
+                                    img(src='img/price-15mo.svg')
+                            .column
+                                .price 
+                                    h3 Enterprise
+                                    img(src='img/price-20mo.svg')
+
+                    .pricing-plan-mobile
+                        .pricing-plan
+                            .price 
+                                h3 Free
+                                img(src='img/price-0mo.svg')
+                            .features
+                                .feaure Project Management
+                        .pricing-plan
+                            .price 
+                                h3 Basic
+                                img(src='img/price-5mo.svg')
+                            .features
+                                .feaure Project Management
+                        .pricing-plan
+                            .price 
+                                h3 Professional
+                                img(src='img/price-15mo.svg')
+                            .features
+                                .feaure Project Management
+                        .pricing-plan
+                            .price 
+                                h3 Enterprise
+                                img(src='img/price-20mo.svg')
+                            .features
+                                .feaure Project Management
+                            
+
+
+            
+block footer
+    .footer-wrapper
+        +cnt
+            +row
+                +col('col-md-6')
+                    h3 Manage Your Projects Anywhere with Structure Mobile
+                    p Our mobile app lets you quickly and easily manage your work time right from your mobile device. Through the app you can enter, review, and edit both billable and non-charge time entries. Plus, it seamlessly ties into all the other features of the main Structure software.
+                    .app-links
+                        .app-link 
+                            a
+                                img(src='img/app-googleplay-button-white.svg')
+                        .app-link 
+                            a
+                                img(src='img/app-appstore-button-white.svg')
+                        .app-link 
+                            a
+                                img(src='img/app-quickbooks-button-white.svg')
+                    .legal
+                        p Legal Stuff, Copyright Us 2018.
+                +col('col-md-6')
+                    h1 FORM HERE

@@ -1,0 +1,43 @@
+mixin wysiwyg
+    -function getRandom(n) {
+    -    var result = new Array(n),
+    -        len = ipsum.length,
+    -        taken = new Array(len);
+    -    if (n > len)
+    -        throw new RangeError("getRandom: more elements taken than available");
+    -    while (n--) {
+    -        var x = Math.floor(Math.random() * len);
+    -        result[n] = ipsum[x in taken ? taken[x] : x];
+    -        taken[x] = --len in taken ? taken[len] : len;
+    -    }
+    -    return result.join(' ');
+    -}
+    h1= getRandom(4)
+    h2= getRandom(5)
+    h3= getRandom(10)
+    h4= getRandom(15)
+    h5= getRandom(20)
+    p= getRandom(40)
+    label= getRandom(15)
+    span= getRandom(40)
+    strong= getRandom(40)
+    sup= getRandom(40)
+    pre= getRandom(20)
+    blockquote= getRandom(50)
+    ul
+        li #[a= getRandom(5)]
+        li= getRandom(5)
+        li= getRandom(5)
+        li= getRandom(5)
+    ol
+        li= getRandom(5)
+        li= getRandom(5)
+        li= getRandom(5)
+        li= getRandom(5)
+    table
+        thead
+            td= getRandom(20)
+        tbody
+            td= getRandom(20)
+        tfoot
+            td= getRandom(20)

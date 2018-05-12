@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Base Template</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <link href="/css/bundle.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css">
+  </head>
+  <body class="standard">
+    <header>
+      <div class="container ">
+        <div class="row">
+          <div>
+            <div class="content" style="margin: 50px; text-align: center;">
+              <h1>Pug Dev</h1>
+            </div>
+          </div>
+        </div>
+      </div>
+      <ul>
+        <li><a href="/">Home</a></li>
+        <li><a href="/components/">Components</a></li>
+        <li><a href="/layouts/">Layouts</a></li>
+        <li><a href="/stage/">Stage</a></li>
+      </ul>
+    </header>
+    <main>
+      <div class="style-guide">
+        <div class="container ">
+          <div class="title">System Colors</div>
+          <div class="color-bar">
+            <div class="accordion">
+              <div class="color color-light trigger"></div>
+              <div class="accordion-content">
+                <div class="container-fluid">
+                  <p>#ffffff</p>
+                  <p>$color-light</p>
+                </div>
+              </div>
+            </div>
+            <div class="accordion">
+              <div class="color color-dark trigger"></div>
+              <div class="accordion-content">
+                <div class="container-fluid">
+                  <p>#141414</p>
+                  <p>$color-dark</p>
+                </div>
+              </div>
+            </div>
+            <div class="accordion">
+              <div class="color color-primary trigger"></div>
+              <div class="accordion-content">
+                <div class="container-fluid">
+                  <p>#006699</p>
+                  <p>$color-primary</p>
+                </div>
+              </div>
+            </div>
+            <div class="accordion">
+              <div class="color color-secondary trigger"></div>
+              <div class="accordion-content">
+                <div class="container-fluid">
+                  <p>#ff3333</p>
+                  <p>$color-secondary</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="title">Accent Colors</div>
+          <div class="color-bar">
+            <div class="accordion">
+              <div class="color color-accent-light trigger"></div>
+              <div class="accordion-content">
+                <div class="container-fluid">
+                  <p>#999999</p>
+                  <p>$color-accent-light</p>
+                </div>
+              </div>
+            </div>
+            <div class="accordion">
+              <div class="color color-accent-dark trigger"></div>
+              <div class="accordion-content">
+                <div class="container-fluid">
+                  <p>#666666</p>
+                  <p>$color-accent-dark</p>
+                </div>
+              </div>
+            </div>
+            <div class="accordion">
+              <div class="color color-accent-primary trigger"></div>
+              <div class="accordion-content">
+                <div class="container-fluid">
+                  <p>#00abff</p>
+                  <p>$color-accent-primary</p>
+                </div>
+              </div>
+            </div>
+            <div class="accordion">
+              <div class="color color-accent-secondary trigger"></div>
+              <div class="accordion-content">
+                <div class="container-fluid">
+                  <p>#0086c4</p>
+                  <p>$color-accent-secondary</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="title">Character Styles</div>
+          <div class="h1">Header 1</div>
+          <div class="flex-row">
+            <div class="col-md-6">
+              <div class="h2">Header 2</div>
+              <div class="h3">Header 3</div>
+              <div class="h4">Header 4</div>
+              <div class="h5">Header 5</div>
+              <div class="subheader">Subheader</div>
+              <div class="quote">Quote</div>
+              <p class="large">Large Body</p>
+              <p>Body</p>
+              <p class="small">Small Body</p>
+              <div class="placeholder">Placeholder</div><a href="javascript:void(0)">Link</a>
+              <p class="btn-row"><a class="btn btn-primary">PRIMARY BUTTON</a><a class="btn btn-primary hover">HOVER</a></p>
+              <p class="btn-row"><a class="btn btn-secondary">SECONDARY BUTTON</a><a class="btn btn-secondary hover">HOVER</a></p>
+            </div>
+            <div class="col-md-6">
+              <div class="title">Paragraph Styles</div>
+              <div class="title">Large</div>
+              <p class="large">Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est eopksio laborum. Sed ut perspiciatis unde omnis istpoe natus error sit voluptatem </p>
+              <div class="title">Standard</div>
+              <p>Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est eopksio laborum. Sed ut perspiciatis unde omnis istpoe natus error sit voluptatem accusantium </p>
+              <div class="title">Small</div>
+              <p class="small">Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est eopksio laborum. Sed ut perspiciatis unde omnis istpoe natus error sit voluptatem accusantium doloremque eopsloi </p>
+              <div class="title">Quote</div>
+              <div class="quote">"Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est eopksio laborum. Sed ut perspiciatis unde omnis istpoe natus error sit voluptatem accusantium doloremque eopsloi"</div>
+              <div class="title">List<small>uses ".list" class</small></div>
+              <ul class="list">
+                <li>Proin eget tortor risus</li>
+                <li>Proin eget tortor risus</li>
+                <li>Proin eget tortor risus</li>
+                <li>Proin eget tortor risus</li>
+              </ul>
+            </div>
+          </div>
+          <div class="title">Form Controls</div>
+          <div class="flex-row">
+            <div class="col-md-6">
+              <input type="text" placeholder="First Name"/>
+              <input type="text" placeholder="Last Name"/>
+              <input type="text" placeholder="Title"/>
+              <input type="text" placeholder="Company"/>
+              <input type="text" placeholder="Email"/>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+    <footer>
+      <div class="container ">
+        <div class="row">
+          <div>
+            <div class="content" style="margin: 50px; text-align: center;">
+              <h1>:)</h1>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <script src="https://code.jquery.com/jquery-3.1.1.min.js" integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8=" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js">          </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/scrollify/1.0.19/jquery.scrollify.js"></script>
+    <script src="/js/vendor.min.js"> </script>
+    <script src="/js/all.min.js">   </script>
+  </body>
+</html>
