@@ -27,12 +27,11 @@ header {
         }
     }
 
-    .logo {
-        text-align: left;
-        img{
+    svg#logo {
             max-height: 38px;
+            height: 40px;
+            fill: white;
         }
-    }
     
 
     .header-wrapper {
