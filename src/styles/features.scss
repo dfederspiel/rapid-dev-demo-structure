@@ -1,0 +1,113 @@
+.features {
+    display: flex;
+    flex-wrap: wrap;
+    .reveal-wrapper {
+        flex: 1 1 100%;
+        @include tablet {
+            flex: 1 1 50%;
+        }
+        @include desktop {
+            flex: 1 1 33%;
+        }
+    }
+    .feature-wrapper {
+        margin: 0 auto;
+        padding: 3rem;
+        max-width: 80rem;
+        @include tablet {
+            
+            min-height: 30rem;
+        }
+        @include laptop {
+            padding: 3rem 0;
+        }
+        .feature-details {
+            display: flex;
+            align-items: center;
+            justify-content: left;
+            flex-wrap: wrap;
+            padding-top: 2.5rem;
+            @include tablet {
+                position: relative;
+            }
+            .icon {
+                @include tablet {
+                    margin-right: 2.4rem;
+                }
+                img {
+                    max-width: 6rem;
+                    width: 6rem;
+                }
+            }
+            .title {
+                padding: 0 1rem;
+                text-align: left;
+                font-size: 2.8rem;
+                line-height: 2.7rem;
+                text-transform: capitalize;
+                display: flex;
+                align-items: center;
+                @include phone {
+                    
+                }
+                @include tablet {
+                
+                }
+                
+                &:before {
+                    content: "";
+                    width: 60px;
+                    height: 60px;
+                    display: inline-block;
+                    margin-right: 20px;
+                }
+
+                &.pm {
+                    &:before {
+                        background: url('/img/icon-users.svg') no-repeat center;
+                    }
+                }
+
+                &.tt {
+                    &:before {
+                        background: url('/img/icon-hourglass.svg') no-repeat center;
+                    }
+                }
+
+                &.rs {
+                    &:before {
+                        background: url('/img/icon-scheduling.svg') no-repeat center;
+                    }
+                }
+
+                &.si {
+                    &:before {
+                        background: url('/img/icon-invoice.svg') no-repeat center;
+                    }
+                }
+
+                &.qi {
+                    &:before {
+                        background: url('/img/icon-qb.svg') no-repeat center;
+                    }
+                }
+
+                &.cb {
+                    &:before {
+                        background: url('/img/icon-cloud.svg') no-repeat center;
+                    }
+                }
+            }
+            .text {
+                font-size: 1.8rem;
+                line-height: 3.5rem;
+                padding: 3rem .5rem;
+                @include laptop {
+                    font-size: 1.8rem;
+                    line-height: 3.5rem;
+                    padding: 1rem .5rem 1rem 9rem;
+                }
+            }
+        }
+    }
+}

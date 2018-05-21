@@ -1,5 +1,15 @@
 extends base.pug
 
+mixin feature(className)
+    .feature-wrapper
+        .feature-details
+            +scroll-reveal('from-top')
+                .title(class= className)
+                    +ipsum(2)
+            +scroll-reveal('from-top')
+                .text
+                    +ipsum(40)
+
 block header
     .header-wrapper
         +cnt
@@ -45,56 +55,64 @@ block header
             +row
                 +col('col-md-6 col-md-push-6 video-link')
                 +col('col-md-6 col-md-pull-6')
-                    h1.
-                        Powerful, yet simple firm management software for Architects & Engineers.
-                    p
-                        +ipsum(50)
-                    button GET A DEMO
+                    +scroll-reveal('from-top')
+                        h1.
+                            Powerful, yet simple firm management software for Architects & Engineers.
+                    +scroll-reveal('from-top')
+                        p
+                            +ipsum(50)
+                    +scroll-reveal('from-top')
+                        button GET A DEMO
 block sub-header
 
 block main
     .body
         +cnt
             +row
-                +col('col-md-6 device-photo') 
-                +col('col-md-6')
-                    h2 Know when and what your employees are working on. Anytime, anywhere.
-                    p Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-                    .check-list
-                        .item Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eismod
-                        .item Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eismod
-                        .item Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eismod
-                        .item Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eismod
-        +cnt
-            +row
-                +col('col-xs-12')
-                    .surtitle Structure Features
-                    .title Improve Your Bottom Line with These Must-Have Features.
-            +row
-                +col('col-md-4')
-                    .icon ICON
-                    h3
-                        +ipsum('2')
-                    p 
-                        +ipsum('40')
-                +col('col-md-4')
-                    .icon ICON
-                    h3
-                        +ipsum('2')
-                    p 
-                        +ipsum('40')
-                +col('col-md-4')
-                    .icon ICON
-                    h3
-                        +ipsum('2')
-                    p 
-                        +ipsum('40')
-                +col('col-md-4')
-                    .icon ICON
-                    h3
-                        +ipsum('2')
-                    p 
-                        +ipsum('40')
+                +scroll-reveal('from-top')
+                    +col('col-md-6 device-photo') 
+                    +col('col-md-6')
+                        +scroll-reveal('from-top')
+                            h2 Know when and what your employees are working on. Anytime, anywhere.
+                        +scroll-reveal('from-top')
+                            p Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                        .check-list
+                            +scroll-reveal('from-top')
+                                .item 
+                                    i.fa.fa-check
+                                    span Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eismod
+                            +scroll-reveal('from-top')    
+                                .item 
+                                    i.fa.fa-check
+                                    span Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eismod
+                            +scroll-reveal('from-top')   
+                                .item 
+                                    i.fa.fa-check
+                                    span Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eismod
+                            +scroll-reveal('from-top')    
+                                .item 
+                                    i.fa.fa-check
+                                    span Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eismod
+        .light-wrapper
+            +cnt
+                +row
+                    +scroll-reveal('from-top')
+                        +col('col-xs-12')
+                            .surtitle Structure Features
+                            .title Improve Your Bottom Line with These Must-Have Features.
+                .features
+                    +scroll-reveal('from-top')
+                        +feature('pm', 'img/icon-users.svg')
+                    +scroll-reveal('from-top')
+                        +feature('tt', 'img/icon-hourglass.svg')
+                    +scroll-reveal('from-top')
+                        +feature('rs', 'img/icon-scheduling.svg')
+                    +scroll-reveal('from-top')
+                        +feature('si', 'img/icon-invoice.svg')
+                    +scroll-reveal('from-top')
+                        +feature('qi', 'img/icon-qb.svg')
+                    +scroll-reveal('from-top')
+                        +feature('cb', 'img/icon-cloud.svg')
         +cnt
             +row
                 +col
