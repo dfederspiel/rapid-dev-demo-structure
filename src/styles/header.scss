@@ -33,6 +33,11 @@ header {
         background: url('/img/header-background-svg.svg') no-repeat center;
         background-size: cover;
         padding: 30px 0 60px;
+        h1 {
+            @include laptop{
+                margin-top: 50px;
+            }
+        }
     }
 
     .video-link {
