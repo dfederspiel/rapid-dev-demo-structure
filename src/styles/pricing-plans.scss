@@ -1,8 +1,50 @@
 .pricing-plan-mobile {
     display: flex;
     flex-direction: column;
+    text-align: center;
     .pricing-plan {
+        margin: 10px;
+        padding: 10px 0;
+        border-radius: 5px;
         display: flex;
+        flex-direction: column;
+        .price {
+            display: flex;
+            align-items: center;
+            justify-content: space-around;
+            flex-direction: column;
+            h3 {
+                font-size: 45px;
+                margin: 40px auto 20px;
+            }
+            img {
+               max-width: 200px;
+               margin: 55px auto;
+            }
+        }
+        .features{
+            display: flex;
+            flex-wrap: wrap;
+            flex-direction: column;
+            margin: 25px 0;
+            .feature {
+                padding: 1.5rem;
+                font-size: 1.8rem;
+                &:nth-child(odd){
+                    background-color: lighten($grey, 50%);
+                  }
+            }
+        }
+        &.featured {
+            background-color: $algae;
+            color: $white;
+            .feature {
+                padding: 15px;
+                &:nth-child(odd){
+                  background-color: darken($algae, 6%);  
+                }
+            }
+        }
     }
 }
 

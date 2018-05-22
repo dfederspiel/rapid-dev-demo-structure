@@ -3,11 +3,11 @@ extends base.pug
 mixin feature(className)
     .feature-wrapper
         .feature-details
-            +scroll-reveal('from-top')
-                .title(class= className)
+            .title(class= className)
+                +scroll-reveal('from-top')
                     +ipsum(2)
-            +scroll-reveal('from-top')
-                .text
+            .text
+                +scroll-reveal('from-top')
                     +ipsum(40)
 
 block header
@@ -62,7 +62,7 @@ block header
                         p
                             +ipsum(50)
                     +scroll-reveal('from-top')
-                        button GET A DEMO
+                        button.notapill GET A DEMO
 block sub-header
 
 block main
@@ -192,30 +192,64 @@ block main
                             .price 
                                 h3 Free
                                 img(src='img/price-0mo.svg')
+                                .order
+                                    button.notapill GET STRUCTURE TODAY
                             .features
-                                .feaure Project Management
+                                .feature Project Management
+                                .feature Reporting
+                                .feature Resource Scheduling
                         .pricing-plan
                             .price 
                                 h3 Basic
                                 img(src='img/price-5mo.svg')
+                                .order
+                                    button.notapill GET STRUCTURE TODAY
                             .features
-                                .feaure Project Management
-                        .pricing-plan
+                                .feature Project Management
+                                .feature Reporting
+                                .feature Resource Scheduling
+                                .feature Time Entry
+                                .feature Mobile App
+                                .feature PTO Tracking
+                        .pricing-plan.featured
                             .price 
                                 h3 Professional
                                 img(src='img/price-15mo.svg')
+                                .order
+                                    button.notapill GET STRUCTURE TODAY
                             .features
-                                .feaure Project Management
+                                .feature Project Management
+                                .feature Reporting
+                                .feature Resource Scheduling
+                                .feature Time Entry
+                                .feature Mobile App
+                                .feature PTO Tracking
+                                .feature Billing
+                                .feature Invoice Templates
+                                .feature Dashboards
+                                .feature Email Invoices
+                                .feature Setup & Training
                         .pricing-plan
                             .price 
                                 h3 Enterprise
                                 img(src='img/price-20mo.svg')
+                                .order
+                                    button.notapill GET STRUCTURE TODAY
                             .features
-                                .feaure Project Management
-                            
-
-
-            
+                                .feature Project Management
+                                .feature Reporting
+                                .feature Resource Scheduling
+                                .feature Time Entry
+                                .feature Mobile App
+                                .feature PTO Tracking
+                                .feature Billing
+                                .feature Invoice Templates
+                                .feature Dashboards
+                                .feature Email Invoices
+                                .feature Quickbooks Online Integration
+                                .feature API Access
+                                .feature Setup & Training
+     
 block footer
     .footer-wrapper
         +cnt
