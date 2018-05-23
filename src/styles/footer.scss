@@ -3,7 +3,7 @@ footer {
     margin-top: 25px;
     background-color: $navy;
     color: $menu-item;
-
+    overflow: hidden;
 
     .footer-wrapper {
         background: url('/img/footer-bg.png') no-repeat center;

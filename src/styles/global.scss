@@ -26,6 +26,7 @@ img {
     height: 500px;
     background: url('/img/ipad-mockup.png') no-repeat center center;
     background-size: 1040px;
+    margin: 0 -15px;
     @include laptop {
         background-size: 950px;
     }
@@ -52,8 +53,8 @@ img {
 
 .light-wrapper {
     background-color: $light-grey;
-    margin: 100px 0;
-    padding: 100px 0;
+    margin: 50px 0;
+    padding: 50px 0;
 }
 
 .icon {
@@ -77,9 +78,14 @@ button.notapill {
         padding: 10px 20px;
         border-radius: 15px;
     }
+
+    @include theme('.featured'){
+        background-color: $white;
+        color: $algae;
+        border-color: $light-algae;
+    }
 }
 
 .pricing-plan-header {
     text-align: center;
-
 }

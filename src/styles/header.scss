@@ -45,5 +45,17 @@ header {
         background: url('/img/header-devices.png') no-repeat center;
         background-size: 500px;
         margin-top: 50px;
+
+        @include at(992){
+            height: 390px;
+            background-size: 660px;
+            margin-top: 120px;
+        }
+
+        @include at(1200){
+            height: 400px;
+            background-size: 790px;
+            margin-top: 60px;
+        }
     }
 }

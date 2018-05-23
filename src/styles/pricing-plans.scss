@@ -21,6 +21,10 @@
                max-width: 200px;
                margin: 55px auto;
             }
+            svg {
+                max-width: 200px;
+                margin: 40px 0;
+            }
         }
         .features{
             border-radius: 5px;
@@ -41,6 +45,11 @@
             }
         }
         &.featured {
+            background-color: $algae;
+            h3 { color: $white; }
+            svg {
+                .a { fill: $white; }
+            }
             .features {
                 background-color: $algae;
                 color: $white;
@@ -69,6 +78,7 @@
 .pricing-plan-desktop {
     display: none;
     width: 100%;
+    margin: 40px 0;
     .heading-row, .feature-row, .pricing-row {
         display: table-row;
         .column {
@@ -93,11 +103,17 @@
             font-size: 20px;
             &:first-child {
                 font-size: 16px;
+                vertical-align: top;
             }
         }
         .featured {
             background-color: $algae;
                 color: $white;
+        }
+        &.support {
+            .column {
+                font-size: 16px;
+            }
         }
     }
 
