@@ -137,8 +137,9 @@ block main
         +cnt
             +row
                 +col
-                    h3 Structure Pricing
-                    h2 Get the Right Set of Features for Your Business.
+                    .pricing-plan-header
+                        h3 Structure Pricing
+                        h2 Get the Right Set of Features for Your Business.
                 +col
                     .pricing-plan-desktop
                         .heading-row
@@ -150,45 +151,153 @@ block main
                         .feature-row
                             .column Project Management
                             .column.checked
+                                i.fa.fa-check
                             .column.checked
+                                i.fa.fa-check
                             .column.checked.featured
+                                i.fa.fa-check
                             .column.checked
+                                i.fa.fa-check
                         .feature-row
                             .column Reporting
                             .column.checked
+                                i.fa.fa-check
                             .column.checked
+                                i.fa.fa-check
                             .column.checked.featured
+                                i.fa.fa-check
                             .column.checked
+                                i.fa.fa-check
                         .feature-row
                             .column Resource Scheduling
                             .column.checked
+                                i.fa.fa-check
                             .column.checked
+                                i.fa.fa-check
                             .column.checked.featured
+                                i.fa.fa-check
                             .column.checked
+                                i.fa.fa-check
                         .feature-row
                             .column Time Entry
                             .column
                             .column.checked
+                                i.fa.fa-check
                             .column.checked.featured
+                                i.fa.fa-check
                             .column.checked
+                                i.fa.fa-check
+                        .feature-row
+                            .column Mobile App
+                            .column
+                            .column.checked
+                                i.fa.fa-check
+                            .column.checked.featured
+                                i.fa.fa-check
+                            .column.checked
+                                i.fa.fa-check
+                        .feature-row
+                            .column PTO Tracking
+                            .column
+                            .column.checked
+                                i.fa.fa-check
+                            .column.checked.featured
+                                i.fa.fa-check
+                            .column.checked
+                                i.fa.fa-check
+                        .feature-row
+                            .column Billing
+                            .column
+                            .column
+                            .column.checked.featured
+                                i.fa.fa-check
+                            .column.checked
+                                i.fa.fa-check
+                        .feature-row
+                            .column Invoice Templates
+                            .column
+                            .column
+                            .column.checked.featured
+                                i.fa.fa-check
+                            .column.checked
+                                i.fa.fa-check
+                        .feature-row
+                            .column Dashboards
+                            .column
+                            .column
+                            .column.checked.featured
+                                i.fa.fa-check
+                            .column.checked
+                                i.fa.fa-check
+                        .feature-row
+                            .column Email Invoices
+                            .column
+                            .column
+                            .column.checked.featured
+                                i.fa.fa-check
+                            .column.checked
+                                i.fa.fa-check
+                        .feature-row
+                            .column Quickbooks Online Integration
+                            .column
+                            .column
+                            .column.featured
+                            .column.checked
+                                i.fa.fa-check
+                        .feature-row
+                            .column API Access
+                            .column
+                            .column
+                            .column.featured
+                            .column.checked
+                                i.fa.fa-check
+                        .feature-row
+                            .column Setup & Training
+                            .column
+                            .column
+                            .column.featured.checked
+                                i.fa.fa-check
+                            .column.checked
+                                i.fa.fa-check
+                        .feature-row
+                            .column Support
+                            .column Online Knowledgebase
+                            .column On Demand
+                            .column.featured Assigned Support Rep w/SLA
+                            .column Assigned Support Rep w/SLA
                         .pricing-row
                             .column Price Per User
                             .column
-                                .price 
-                                    h3 Free
-                                    img(src='img/price-0mo.svg')
+                                .price
+                                    include components/svg/price-0mo.pug
                             .column
-                                .price 
-                                    h3 Basic
-                                    img(src='img/price-5mo.svg')
+                                .price
+                                    include components/svg/price-5mo.pug
+                            .column.featured
+                                .price
+                                    include components/svg/price-15mo.pug
                             .column
-                                .price 
-                                    h3 Professional
-                                    img(src='img/price-15mo.svg')
+                                .price
+                                    include components/svg/price-20mo.pug
+                        .pricing-row
                             .column
-                                .price 
-                                    h3 Enterprise
-                                    img(src='img/price-20mo.svg')
+                            .column
+                            .column
+                                p Per User Billed Annually#[br]$7 Billed Monthly
+                            .column.featured
+                                p Per User Billed Annually#[br]$18 Billed Monthly
+                            .column
+                                p Per User Billed Annually#[br]$25 Billed Monthly
+                        .pricing-row
+                            .column
+                            .column
+                                button.notapill GET STRUCTURE TODAY
+                            .column
+                                button.notapill GET STRUCTURE TODAY
+                            .column.featured
+                                button.notapill GET STRUCTURE TODAY
+                            .column
+                                button.notapill GET STRUCTURE TODAY
 
                     .pricing-plan-mobile
                         .pricing-plan
@@ -201,6 +310,7 @@ block main
                                 .feature Project Management
                                 .feature Reporting
                                 .feature Resource Scheduling
+                        hr
                         .pricing-plan
                             .price 
                                 h3 Basic
@@ -214,6 +324,7 @@ block main
                                 .feature Time Entry
                                 .feature Mobile App
                                 .feature PTO Tracking
+                        hr
                         .pricing-plan.featured
                             .price 
                                 h3 Professional
@@ -232,6 +343,7 @@ block main
                                 .feature Dashboards
                                 .feature Email Invoices
                                 .feature Setup & Training
+                        hr
                         .pricing-plan
                             .price 
                                 h3 Enterprise
@@ -252,6 +364,7 @@ block main
                                 .feature Quickbooks Online Integration
                                 .feature API Access
                                 .feature Setup & Training
+                        hr
      
 block footer
     .footer-wrapper

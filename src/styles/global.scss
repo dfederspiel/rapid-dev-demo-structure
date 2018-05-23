@@ -68,4 +68,18 @@ button.notapill {
     border-style: solid;
     padding: 10px 40px;
     box-shadow: 0 3px 6px rgba(0,0,0,.16);
+    @include theme('header') {
+        margin-top: 40px;
+    }
+
+    @include theme('.pricing-plan-desktop .pricing-row'){
+        font-size: 16px;
+        padding: 10px 20px;
+        border-radius: 15px;
+    }
+}
+
+.pricing-plan-header {
+    text-align: center;
+
 }
