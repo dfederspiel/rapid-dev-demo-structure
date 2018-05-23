@@ -37,8 +37,8 @@
                 padding: 1.5rem;
                 font-size: 1.8rem;
                 &:nth-child(odd){
-                    background-color: lighten($grey, 50%);
-                  }
+                    background-color: $light-grey;
+                }
             }
             &:last-child{
                 margin-bottom: 0;
@@ -64,7 +64,7 @@
         }
     }
     hr {
-        width: calc(100vw - 50%);
+        width: calc(100% - 50%);
         height: .5rem;
         background-color: #09705b;
         margin: 0 25%;
@@ -163,7 +163,7 @@
     }
 }
 
-@include tablet {
+@include laptop {
     .pricing-plan-mobile {
         display: none;
     }
