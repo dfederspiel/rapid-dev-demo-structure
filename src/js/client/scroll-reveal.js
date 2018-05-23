@@ -3,7 +3,8 @@ window.sr = ScrollReveal({ reset: true });
 var defaultOptions = {
     duration: 500, 
     delay: 50, 
-    origin: "top"
+    origin: "top",
+    distance: '200px'
 }
 
 function setReveal(animationClass, options){
