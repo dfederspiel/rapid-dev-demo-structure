@@ -47,6 +47,10 @@ h3,
     font-weight: 700;
     margin-top: 0;
     margin-bottom: 1.5rem;
+    @include theme('footer'){
+        font-size: 4.2rem;
+        line-height: 5.2rem;
+    }
     
 }
 

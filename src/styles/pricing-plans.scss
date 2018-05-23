@@ -23,10 +23,12 @@
             }
         }
         .features{
+            border-radius: 5px;
             display: flex;
             flex-wrap: wrap;
             flex-direction: column;
             margin: 25px 0;
+            padding: 25px 0;
             .feature {
                 padding: 1.5rem;
                 font-size: 1.8rem;
@@ -34,26 +36,113 @@
                     background-color: lighten($grey, 50%);
                   }
             }
+            &:last-child{
+                margin-bottom: 0;
+            }
         }
         &.featured {
-            background-color: $algae;
-            color: $white;
-            .feature {
-                padding: 15px;
-                &:nth-child(odd){
-                  background-color: darken($algae, 6%);  
+            .features {
+                background-color: $algae;
+                color: $white;
+                border-bottom: none;
+                .feature {
+                    padding: 15px;
+                    &:nth-child(odd){
+                      background-color: darken($algae, 6%);  
+                    }
                 }
             }
+        }
+    }
+    hr {
+        width: calc(100vw - 50%);
+        height: .5rem;
+        background-color: #09705b;
+        margin: 0 25%;
+        border-radius: 10px;
+        &:last-child {
+            display: none;
         }
     }
 }
 
 .pricing-plan-desktop {
     display: none;
+    width: 100%;
     .heading-row, .feature-row, .pricing-row {
         display: table-row;
         .column {
             display: table-cell;
+        }
+    }
+    .heading {
+        &.column {
+            font-weight: bold;
+            font-size: 24px;
+            &.featured {
+                background-color: $algae;
+                color: $white;
+            }
+        }
+    }
+    .feature-row, .pricing-row, .heading-row {
+        .column {
+            display: table-cell;
+            padding: 10px;
+            text-align: center;
+            font-size: 20px;
+            &:first-child {
+                font-size: 16px;
+            }
+        }
+        .featured {
+            background-color: $algae;
+                color: $white;
+        }
+    }
+
+    .heading-row {
+        .column {
+            padding: 35px 0;
+            border-radius: 5px 5px 0 0;
+        }
+    }
+
+    .feature-row {
+        .column {
+            &:first-child {
+                text-align: left;
+            }
+        }
+        &:nth-child(odd){
+            background-color: $light-grey;
+            .featured {
+                background-color: darken($algae, 6%); 
+            }
+        }
+    }
+
+    .pricing-row {
+        .column {
+            width: 20%;
+            &:first-child {
+                text-align: left;
+                max-width: 20%;
+            }
+            svg {
+                height: 100px;
+                padding: 20px 0;
+            }
+            &.featured {
+                svg {
+                    .a { fill: $white; }
+                }
+            }
+        }
+        &:last-child {
+            .featured {
+                border-radius: 0 0 5px 5px;
+            }
         }
     }
 }
