@@ -2,7 +2,7 @@ window.sr = ScrollReveal({ reset: true });
 
 var defaultOptions = {
     duration: 700, 
-    delay: 150, 
+    delay: 50, 
     origin: "top"
 }
 

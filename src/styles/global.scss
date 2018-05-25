@@ -71,6 +71,9 @@ button.notapill {
     box-shadow: 0 3px 6px rgba(0,0,0,.16);
     @include theme('header') {
         margin-top: 40px;
+        @include laptop {
+            margin-top: 0;
+        }
     }
 
     @include theme('.pricing-plan-desktop .pricing-row'){
