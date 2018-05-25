@@ -23,10 +23,13 @@ header {
     }
 
     svg#logo {
-            max-height: 30px;
-            height: 30px;
-            fill: white;
+        max-height: 30px;
+        height: 30px;
+        fill: white;
+        @include desktop {
+            margin-top: 20px;
         }
+    }
     
 
     .header-wrapper {
