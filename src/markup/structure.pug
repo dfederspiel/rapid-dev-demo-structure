@@ -13,7 +13,7 @@ block header
         +cnt
             +row
                 +col('col-xs-3')
-                   include components/svg/structure.pug
+                   include svg/structure.pug
                 +col('col-xs-9')
                     .top-menu
                         a(href='') Pricing
@@ -38,6 +38,7 @@ block main
                 +col('col-md-6') 
                     +scroll-reveal('from-bottom')
                         .device-photo
+                        iframe(width='560', height='315', src='https://www.youtube.com/embed/WxtOCxxP1do', frameborder='0', allow='autoplay; encrypted-media', allowfullscreen='')
                 +col('col-md-6')
                     +scroll-reveal('from-right')
                         h2 Know when and what your employees are working on. Anytime, anywhere.
@@ -236,16 +237,16 @@ block main
                             .column Price Per User
                             .column
                                 .price
-                                    include components/svg/price-0mo.pug
+                                    include svg/price-0mo.pug
                             .column
                                 .price
-                                    include components/svg/price-5mo.pug
+                                    include svg/price-5mo.pug
                             .column.featured
                                 .price
-                                    include components/svg/price-15mo.pug
+                                    include svg/price-15mo.pug
                             .column
                                 .price
-                                    include components/svg/price-20mo.pug
+                                    include svg/price-20mo.pug
                         .pricing-row
                             .column
                             .column
@@ -281,7 +282,7 @@ block main
                         .pricing-plan
                             .price 
                                 h3 Basic
-                                include components/svg/price-5mo.pug
+                                include svg/price-5mo.pug
                                 .order
                                     button.notapill GET STRUCTURE TODAY
                             .features
@@ -291,11 +292,10 @@ block main
                                 .feature Time Entry
                                 .feature Mobile App
                                 .feature PTO Tracking
-                        hr
                         .pricing-plan.featured
                             .price 
                                 h3 Professional
-                                include components/svg/price-15mo.pug
+                                include svg/price-15mo.pug
                                 .order
                                     button.notapill GET STRUCTURE TODAY
                             .features
@@ -310,11 +310,10 @@ block main
                                 .feature Dashboards
                                 .feature Email Invoices
                                 .feature Setup & Training
-                        hr
                         .pricing-plan
                             .price 
                                 h3 Enterprise
-                                include components/svg/price-20mo.pug
+                                include svg/price-20mo.pug
                                 .order
                                     button.notapill GET STRUCTURE TODAY
                             .features
