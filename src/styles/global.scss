@@ -21,6 +21,12 @@ img {
     max-width: 100%;
 }
 
+#player {
+    display: none;
+    &.playing {
+        display: block;
+    }
+}
 
 .device-photo{
     height: 500px;

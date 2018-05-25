@@ -9,6 +9,7 @@ mixin feature(className)
                 +ipsum(40)
 
 block header
+    #player
     .header-wrapper
         +cnt
             +row
@@ -23,7 +24,6 @@ block header
             +row
                 +col('col-md-6 col-md-push-6')
                     .video-link
-                    //-iframe(width='560', height='315', src='https://www.youtube.com/embed/WxtOCxxP1do', frameborder='0', allow='autoplay; encrypted-media', allowfullscreen='')
                 +col('col-md-6 col-md-pull-6')
                     h1.
                         Powerful, yet simple firm management software for Professional Services Firms.
@@ -39,7 +39,6 @@ block main
                 +col('col-md-6') 
                     +scroll-reveal('from-bottom')
                         .device-photo
-                        iframe(width='560', height='315', src='https://www.youtube.com/embed/WxtOCxxP1do', frameborder='0', allow='autoplay; encrypted-media', allowfullscreen='')
                 +col('col-md-6')
                     +scroll-reveal('from-right')
                         h2 Know when and what your employees are working on. Anytime, anywhere.
@@ -272,7 +271,7 @@ block main
                         .pricing-plan
                             .price 
                                 h3 Free
-                                include components/svg/price-0mo.pug
+                                include svg/price-0mo.pug
                                 .order
                                     button.notapill GET STRUCTURE TODAY
                             .features
