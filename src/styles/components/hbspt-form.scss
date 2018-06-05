@@ -1,0 +1,42 @@
+.hs-form {
+    font-family: $ssans;
+    input {
+        width: 100%;
+        &.hs-input {
+            background-color: transparent;
+            border-radius: 0;
+            border: none;
+            border-bottom: 1px solid white;
+        }
+
+        &.hs-button {
+            border-radius: 50px;
+            background-color: $algae;
+            color: $white;
+            border-color: $light-algae;
+            border-style: solid;
+            padding: 10px 40px;
+            box-shadow: 0 3px 6px rgba(0,0,0,.16);
+            background-image: none;
+        }
+    }
+
+    .hs-form-required, span {
+        color: white;
+    }
+
+    .hs-error-msgs {
+        label {
+            color: white;
+        }
+    }
+
+    fieldset {
+        > div {
+            width: 100% !important;
+            @include tablet {
+                width: initial;
+            }
+        }
+    }
+}

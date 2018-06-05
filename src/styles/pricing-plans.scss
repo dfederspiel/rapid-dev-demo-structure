@@ -48,7 +48,10 @@
             background-color: $algae;
             h3 { color: $white; }
             svg {
-                .a { fill: $white; }
+                .a { 
+                    fill: $white;
+                    stroke: transparent;
+                }
             }
             .features {
                 background-color: $algae;
