@@ -24,7 +24,7 @@ require('es6-promise').polyfill();
 
 const templateDistributionLocation = "./dist";
 
-gulp.task('json', function(){
+const json = function(cb){
     var json = require('./src/data/generate.js');
     fs.writeFile("./src/data/db.json", JSON.stringify(json()), 'utf8', function (err) {
         if (err) {
@@ -32,9 +32,10 @@ gulp.task('json', function(){
         }
         console.log("The file was saved!");
     });
-})
+    cb();
+}
 
-gulp.task('html', function () {
+const html = function (cb) {
     gulp.src([
             './src/markup/**/*.pug', 
             '!./src/markup/generators/**/*.pug',
@@ -49,21 +50,24 @@ gulp.task('html', function () {
             compileDebug: false
         }))
         .on('error', gutil.log)
+        .on('end', cb)
         .pipe(replace(entities.decode("&#65279;"), ''))
-        .pipe(gulp.dest(templateDistributionLocation + '/'));
-});
+        .pipe(gulp.dest(templateDistributionLocation + '/'))
+}
 
-gulp.task('image', function () {
+const image = function (cb) {
     gulp.src('./src/img/**/*.*')
-        .pipe(gulp.dest(templateDistributionLocation + '/img'));
-});
+        .pipe(gulp.dest(templateDistributionLocation + '/img'))
+        .on('end', cb)
+}
 
-gulp.task('font', function () {
+const font = function (cb) {
     gulp.src('./src/fonts/**/*.*')
-        .pipe(gulp.dest(templateDistributionLocation + '/fonts'));
-});
+        .pipe(gulp.dest(templateDistributionLocation + '/fonts'))
+        .on('end', cb)
+}
 
-gulp.task('js-client', function (callback) {
+const jsClient = function (cb) {
     pump([
         gulp.src('./src/js/client/**/*.js'),
         sourcemaps.init(),
@@ -76,11 +80,11 @@ gulp.task('js-client', function (callback) {
         sourcemaps.write('.'),
         gulp.dest(templateDistributionLocation + '/js')
     ],
-    callback
+    cb
   );
-})
+}
 
-gulp.task('js-vendor', function (callback) {
+const jsVendor = function (cb) {
     pump([
         gulp.src('./src/js/vendor/**/*.js'),
         sourcemaps.init(),
@@ -93,11 +97,11 @@ gulp.task('js-vendor', function (callback) {
         sourcemaps.write('.'),
         gulp.dest(templateDistributionLocation + '/js')
     ],
-    callback
+    cb
   );
-})
+}
 
-gulp.task('scss', function () {
+const scss = function (cb) {
 
     var postcss = require('gulp-postcss');
     var autoprefixer = require('autoprefixer');
@@ -122,11 +126,12 @@ gulp.task('scss', function () {
             ))
             .pipe(sourcemaps.write('.'))
             .on('error', gutil.log)
+            .on('end', cb)
             .pipe(gulp.dest(templateDistributionLocation + '/css'));
     }
-})
+}
 
-gulp.task('serve', ['html', 'scss', 'js-client', 'js-vendor', 'font', 'image'], function () {
+const serve = function () {
     browserSync({
         notify: false,
         logPrefix: 'Wafer',
@@ -135,21 +140,7 @@ gulp.task('serve', ['html', 'scss', 'js-client', 'js-vendor', 'font', 'image'], 
             baseDir: "./dist/"
         }
     });
-
-    watch_stuff();
-});
-
-gulp.task('watch', ['html', 'scss', 'js-client', 'js-vendor', 'font', 'image'], function () {
-    watch_stuff();
-});
-
-gulp.task('default', ['html', 'scss', 'js-client', 'js-vendor', 'font', 'image']);
-
-function watch_stuff(){
-    watch(['./src/styles/**/*.scss'], function(){ gulp.start('scss'); reload(); });
-    watch(['./src/js/**/*.js'], function(){ gulp.start('js-vendor'); gulp.start('js-client'); reload(); });
-    watch(['./src/data/**/*.js'], function(){ gulp.start('json'); gulp.start('html'); reload(); });
-    watch(['./src/img/**/*.*'], function(){ gulp.start('image'); reload(); });
-    watch(['./src/fonts/**/*.*'], function(){ gulp.start('fonts'); reload(); });
-    watch(['./src/markup/**/*.pug'], function(){ gulp.start('html'); reload(); });
 }
+
+gulp.task('build', gulp.series(json, gulp.series(html, scss, image, jsClient, jsVendor, font)));
+gulp.task('serve', serve);
