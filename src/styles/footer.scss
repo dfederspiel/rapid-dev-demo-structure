@@ -1,22 +1,13 @@
 footer {
-   
     margin-top: 25px;
     background-color: $navy;
     color: $menu-item;
-    overflow: hidden;
+    min-height: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 
-    .footer-wrapper {
-        background: url('/img/footer-bg.png') no-repeat center;
-        background-size: cover;
-        padding: 30px 0 60px;
-    }
-
-    .app-links {
-        display: flex;
-        flex-wrap: nowrap;
-        align-items: center;
-        .app-link {
-            flex: 1 1 33%;
-        }
+    p {
+        text-align: center;
     }
 }

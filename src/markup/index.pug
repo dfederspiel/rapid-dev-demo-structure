@@ -1,34 +1,346 @@
-﻿extends base.pug
+extends base.pug
 
-//- this block will overwrite what is in template.pug
+mixin feature(className, title, body)
+    .feature-wrapper
+        .feature-details
+            .title(class= className)
+                =title
+            .text
+                =body
+
+block header
+    #player
+    .header-wrapper
+        +cnt
+            +row
+                +col('col-xs-3')
+                   include svg/structure.pug
+                +col('col-xs-9')
+                    .top-menu
+                        a(onclick="Scroll.To('#benefits')") Benefits
+                        a(onclick="Scroll.To('#features')") Features
+                        a(onclick="Scroll.To('#pricing')") Pricing
+                        button.notapill.hidden-xs.hidden-sm.hidden-md GET A DEMO
+            +row
+                +col('col-md-6 col-md-push-6')
+                    .video-link
+                +col('col-md-6 col-md-pull-6')
+                    h1.
+                        Powerful, Yet Simple Firm Management Software for Professional Services Firms
+                    p.
+                        Firm management software doesn’t have to be complicated. Move away from the overhead of other professional services software with Structure. This easy-to-use platform lets you manage every aspect of your projects, from resource scheduling to client billing.
+                    button.notapill.hidden-lg GET A DEMO
+block sub-header
+
 block main
-    +cnt
-        +row
-            +col
-                //- attributes can be added inside ()
-                h2(style='margin-top: 0').
-                    Welcome to your new pug templates!
-                //- text can be inlined, no problem
-                p You might notice that, on the surface, this looks a little confusing.
-                //- or multi-line text can be written if you end a tag with '.'
-                p.
-                    But fear not, give yourself a day to play and you'll be up to speed 
-                    and quickly building things for the future. We've tried to capture a
-                    number of ways to write pug syntax so we can all gain momentum quickly.
-                p
-                    h3 First, let's talk about 
-                        a(href='https://pugjs.org/api/getting-started.html', style='color: #369') Pug
-                    //- plain text can be 'piped' out
-                    | Everything you see here consists of a bunch of smaller pieces
-                    | that more closely resemble how a site might be applied in a cms, or in general, the various components that
-                    | make up even a static site with rigid separation of concerns. By creating everything in pug, we get
-                    | get to take advantage of a cms like dev experience, using includes and succinct markup to create our themes,
-                    | components, and enabling us to quickly stage them for review and delivery.
-                p
-                    h3 Secondly, let's talk about 
-                        a(href='https://www.npmjs.com/package/browser-sync', style='color: #369') Browser Sync
-                    | Browser sync is going to speed things up for you, and since the goal of a template project is to keep our
-                    | front-end development in an instant-feedback environment, we can use gulp processes to compile all of our assets,
-                    | including html/pug, and then pass that off to browser sync to automatically detect changes and refresh your
-                    | browser without mouse-clicks.
-                
+    .body
+        .anchor#benefits
+            +cnt
+                +row
+                    +col('col-md-6') 
+                        +scroll-reveal('from-bottom')
+                            .device-photo
+                    +col('col-md-6')
+                        +scroll-reveal('from-right')
+                            h2 Have Better Oversight of Your Entire Firm with Structure 
+                        +scroll-reveal('from-right')
+                            p Structure is a simple, web-based tool that provides all the insight you need to understand the performance of on-going projects and your firm as a whole. Quickly and easily track client work, flexibly bill your clients, and gain insight into on-going projects with this intuitive software solution.
+                        +scroll-reveal('from-right')
+                            p With Structure You Can: 
+                        .check-list
+                            +scroll-reveal('from-right')
+                                .item 
+                                    i.fa.fa-check
+                                    span Monitor Project Phases & Budgets
+                            +scroll-reveal('from-right')    
+                                .item 
+                                    i.fa.fa-check
+                                    span Easily Assign Resources to Projects
+                            +scroll-reveal('from-right')   
+                                .item 
+                                    i.fa.fa-check
+                                    span Create Custom Invoice Templates
+                            +scroll-reveal('from-right')    
+                                .item 
+                                    i.fa.fa-check
+                                    span Track Business and Projects of the Entire Firm with Custom Reports
+        .light-wrapper#features
+            +cnt#features
+                +row
+                    +col('col-xs-12')
+                        +scroll-reveal('from-top')
+                            .surtitle Structure Features
+                        +scroll-reveal('from-top')
+                            .title Improve Your Bottom Line with These Must-Have Features
+                .features
+                    +scroll-reveal('from-bottom')
+                        +feature('pm', 'Project Management', 'Set-up and manage any project type, including hourly and fixed fee. With Structure, you can quickly establish budgets for project phases and sub-phases. Plus, you’ll have visibility into the status of projects including hour progress and realized rates.')
+                    +scroll-reveal('from-bottom')
+                        +feature('rs', 'Resource Scheduling', 'Structure’s resource scheduler helps firms maximize utilization of personnel and gives you the ability to forecast revenue. A handy calendar feature shows how resources are scheduled at a glance, making it easy to assign projects.')
+                    +scroll-reveal('from-bottom')
+                        +feature('tt', 'Detailed Time Tracking', 'Entering your time has never been simpler than with Structure. Handy short cuts for copying existing entries make logging time easy and encourage timely entry. Plus, with our companion mobile app, you can now enter your time from any device!')
+                    +scroll-reveal('from-bottom')
+                        +feature('si', 'Simple Invoicing', 'Invoice your clients directly from Structure. Create custom invoice templates and then use our two-step process to create a draft invoice for approval. Completed invoices can be emailed to clients directly or printed.')
+                    +scroll-reveal('from-bottom')
+                        +feature('qi', 'Quickbooks Integration', 'With our seamless Quickbooks integration, you can manage projects and invoice them through Structure while maintaining your everyday accounting in Quickbooks.')
+                    +scroll-reveal('from-bottom')
+                        +feature('cb', 'Cloud-Based', 'Structure is a cloud-based web application, so there’s no set up required. Just sign up for an account and log in. You’ll find all the features are there, ready for you to get started.')
+        +cnt
+            +row
+                +col
+                    .testimonial
+                        .image
+                        .name
+                        .title
+                        .quote
+                    .testimonial
+                        .image
+                        .name
+                        .title
+                        .quote
+                    .testimonial
+                        .image
+                        .name
+                        .title
+                        .quote
+        .anchor#pricing
+            +cnt
+                +row
+                    +col
+                        .pricing-plan-header
+                            +scroll-reveal('from-top')
+                                .surtitle Structure Pricing
+                            +scroll-reveal('from-top')
+                                .title Get the Right Set of Features for Your Business.
+                    +col
+                        .pricing-plan-desktop
+                            .heading-row
+                                .heading.column
+                                .heading.column Free
+                                .heading.column Basic
+                                .heading.column.featured Professional
+                                .heading.column Enterprise
+                            .feature-row
+                                .column Project Management
+                                .column.checked
+                                    i.fa.fa-check
+                                .column.checked
+                                    i.fa.fa-check
+                                .column.checked.featured
+                                    i.fa.fa-check
+                                .column.checked
+                                    i.fa.fa-check
+                            .feature-row
+                                .column Reporting
+                                .column.checked
+                                    i.fa.fa-check
+                                .column.checked
+                                    i.fa.fa-check
+                                .column.checked.featured
+                                    i.fa.fa-check
+                                .column.checked
+                                    i.fa.fa-check
+                            .feature-row
+                                .column Resource Scheduling
+                                .column.checked
+                                    i.fa.fa-check
+                                .column.checked
+                                    i.fa.fa-check
+                                .column.checked.featured
+                                    i.fa.fa-check
+                                .column.checked
+                                    i.fa.fa-check
+                            .feature-row
+                                .column Time Entry
+                                .column
+                                .column.checked
+                                    i.fa.fa-check
+                                .column.checked.featured
+                                    i.fa.fa-check
+                                .column.checked
+                                    i.fa.fa-check
+                            .feature-row
+                                .column Mobile App
+                                .column
+                                .column.checked
+                                    i.fa.fa-check
+                                .column.checked.featured
+                                    i.fa.fa-check
+                                .column.checked
+                                    i.fa.fa-check
+                            .feature-row
+                                .column PTO Tracking
+                                .column
+                                .column.checked
+                                    i.fa.fa-check
+                                .column.checked.featured
+                                    i.fa.fa-check
+                                .column.checked
+                                    i.fa.fa-check
+                            .feature-row
+                                .column Billing
+                                .column
+                                .column
+                                .column.checked.featured
+                                    i.fa.fa-check
+                                .column.checked
+                                    i.fa.fa-check
+                            .feature-row
+                                .column Invoice Templates
+                                .column
+                                .column
+                                .column.checked.featured
+                                    i.fa.fa-check
+                                .column.checked
+                                    i.fa.fa-check
+                            .feature-row
+                                .column Dashboards
+                                .column
+                                .column
+                                .column.checked.featured
+                                    i.fa.fa-check
+                                .column.checked
+                                    i.fa.fa-check
+                            .feature-row
+                                .column Email Invoices
+                                .column
+                                .column
+                                .column.checked.featured
+                                    i.fa.fa-check
+                                .column.checked
+                                    i.fa.fa-check
+                            .feature-row
+                                .column Quickbooks Online Integration
+                                .column
+                                .column
+                                .column.featured
+                                .column.checked
+                                    i.fa.fa-check
+                            .feature-row
+                                .column API Access
+                                .column
+                                .column
+                                .column.featured
+                                .column.checked
+                                    i.fa.fa-check
+                            .feature-row
+                                .column Setup & Training
+                                .column
+                                .column
+                                .column.featured.checked
+                                    i.fa.fa-check
+                                .column.checked
+                                    i.fa.fa-check
+                            .feature-row.support
+                                .column Support
+                                .column Online Knowledgebase
+                                .column On Demand
+                                .column.featured Assigned Support Rep w/SLA
+                                .column Assigned Support Rep w/SLA
+                            .pricing-row
+                                .column Price Per User
+                                .column
+                                    .price
+                                        include svg/price-0mo.pug
+                                .column
+                                    .price
+                                        include svg/price-5mo.pug
+                                .column.featured
+                                    .price
+                                        include svg/price-15mo.pug
+                                .column
+                                    .price
+                                        include svg/price-20mo.pug
+                            .pricing-row
+                                .column
+                                .column
+                                .column
+                                    p Per User Billed Annually#[br]$7 Billed Monthly
+                                .column.featured
+                                    p Per User Billed Annually#[br]$18 Billed Monthly
+                                .column
+                                    p Per User Billed Annually#[br]$25 Billed Monthly
+                            .pricing-row
+                                .column
+                                .column
+                                    button.notapill GET STRUCTURE TODAY
+                                .column
+                                    button.notapill GET STRUCTURE TODAY
+                                .column.featured
+                                    button.notapill GET STRUCTURE TODAY
+                                .column
+                                    button.notapill GET STRUCTURE TODAY
+
+                        .pricing-plan-mobile
+                            .pricing-plan
+                                .price 
+                                    h3 Free
+                                    include svg/price-0mo.pug
+                                    .order
+                                        button.notapill GET STRUCTURE TODAY
+                                .features
+                                    .feature Project Management
+                                    .feature Reporting
+                                    .feature Resource Scheduling
+                            hr
+                            .pricing-plan
+                                .price 
+                                    h3 Basic
+                                    include svg/price-5mo.pug
+                                    .order
+                                        button.notapill GET STRUCTURE TODAY
+                                .features
+                                    .feature Project Management
+                                    .feature Reporting
+                                    .feature Resource Scheduling
+                                    .feature Time Entry
+                                    .feature Mobile App
+                                    .feature PTO Tracking
+                            .pricing-plan.featured
+                                .price 
+                                    h3 Professional
+                                    include svg/price-15mo.pug
+                                    .order
+                                        button.notapill GET STRUCTURE TODAY
+                                .features
+                                    .feature Project Management
+                                    .feature Reporting
+                                    .feature Resource Scheduling
+                                    .feature Time Entry
+                                    .feature Mobile App
+                                    .feature PTO Tracking
+                                    .feature Billing
+                                    .feature Invoice Templates
+                                    .feature Dashboards
+                                    .feature Email Invoices
+                                    .feature Setup & Training
+                            .pricing-plan
+                                .price 
+                                    h3 Enterprise
+                                    include svg/price-20mo.pug
+                                    .order
+                                        button.notapill GET STRUCTURE TODAY
+                                .features
+                                    .feature Project Management
+                                    .feature Reporting
+                                    .feature Resource Scheduling
+                                    .feature Time Entry
+                                    .feature Mobile App
+                                    .feature PTO Tracking
+                                    .feature Billing
+                                    .feature Invoice Templates
+                                    .feature Dashboards
+                                    .feature Email Invoices
+                                    .feature Quickbooks Online Integration
+                                    .feature API Access
+                                    .feature Setup & Training
+                            hr
+     
+block footer
+    .footer-wrapper
+        +cnt
+            +row
+                +col
+                    +scroll-reveal('from-bottom')
+                        .legal
+                            p Copyright &copy; 2018.
