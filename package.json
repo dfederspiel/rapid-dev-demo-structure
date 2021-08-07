@@ -4,6 +4,9 @@
   "private": true,
   "description": "The Project - Static Templates for Sitefinity",
   "author": "Aptera Software, Inc.",
+  "scripts": {
+    "build": "gulp build"
+  },
   "devDependencies": {
     "autoprefixer": "^8.4.1",
     "babel-core": "^6.26.3",
