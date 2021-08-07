@@ -1,6 +1,0 @@
-﻿{
-  "References": [
-    { "Path": "../node_modules/jquery/dist/jquery.js" },
-    { "Path": "../src/js/background.js" }
-  ]
-}
